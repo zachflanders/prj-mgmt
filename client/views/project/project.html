@@ -1,0 +1,28 @@
+<template name="project">
+  <h2>{{projectNumber}} - {{projectName}}
+    <div class='btn-group pull-right'>
+      <a href='/project/{{_id}}/update/add' class='btn btn-default'>
+        <i class='fa fa-plus'></i>&nbsp;&nbsp;Add Update
+      </a>
+      <a href='/project/{{_id}}/edit' class='btn btn-default'>
+        <i class='fa fa-pencil'></i>&nbsp;&nbsp;Edit Project
+      </a>
+    </div>
+  </h2>
+  <p><strong>Total Fee: </strong>{{formatCurrency totalFee}}</p>
+  <p><strong>BNIM Fee: </strong>{{formatCurrency bnimFee}}</p>
+  <p><strong>Consultant Fee: </strong>{{formatCurrency consultantFee}}</p>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <strong>Update log</strong>
+    </div>
+    <ul class="list-group">
+    {{#each updates}}
+      <li class='list-group-item'><a href="/project/{{projectId}}/update/{{_id}}">{{date}}</a></li>
+    {{/each}}
+  </ul>
+</div>
+
+</template>

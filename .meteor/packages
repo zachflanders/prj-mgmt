@@ -23,3 +23,9 @@ iron:router
 accounts-base
 accounts-password
 accounts-ui
+fortawesome:fontawesome
+themeteorchef:bert
+aldeed:collection2
+themeteorchef:jquery-validation
+momentjs:moment
+lepozepo:accounting

@@ -1,8 +1,8 @@
-<template name="projectAdd">
-  <h2>Add Project</h2>
+<template name='projectEdit'>
+  <h2>{{projectNumber}} - {{projectName}}</h2>
   <div class='panel panel-default'>
     <div class="panel-body">
-      <form id='projectAdd'>
+      <form id='projectEdit'>
         <h3>Project Information</h3>
         <hr>
         <div class='form-group'>
@@ -28,8 +28,21 @@
           <label for="consultantFee">Consultant Fee</label>
           <input type='Number' step="any" class ='form-control' name='consultantFee' value="{{consultantFee}}">
         </div>
-        <button type="submit" class="btn btn-default pull-right">Add Project</button>
+
+        <div class='pull-right'>
+        <a href="/project/{{_id}}" class="btn btn-default cancel">Cancel</a>
+        <button type="submit" class="btn btn-default">Edit Project</button>
+
+      </div>
       </form>
+    </div>
+  </div>
+  <div class='panel panel-default'>
+    <div class="panel-body">
+      <h3>Delete Project</h3>
+      <hr>
+      <p class='text-danger'>Warning, this cannot be undone!</p>
+      <a href="#" class="btn btn-danger delete">Delete Project</a>
     </div>
   </div>
 </template>

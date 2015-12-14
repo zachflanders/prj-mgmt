@@ -1,0 +1,10 @@
+<template name="projects">
+  <h2>Projects <a href="/project/add" class='btn btn-default pull-right'><i class='fa fa-plus'></i>&nbsp;&nbsp;Add Project</a></h2>
+  <div class='panel panel-default'>
+    <ul class='list-group'>
+      {{#each projects}}
+          <li class='list-group-item'><strong><a href="/project/{{_id}}">{{projectNumber}} - {{projectName}}</a></strong></li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
