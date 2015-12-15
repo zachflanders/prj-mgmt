@@ -63,8 +63,12 @@ Router.route('/project/:projectId/update/:_id', {
     action: function() {
         if (this.ready()) {
             var params = this.params;
-            var id = params.projectId;
-            this.render('projectUpdateAdd');
+            var id = params._id;
+            this.render('projectUpdate', {
+                data: function () {
+                    return Updates.findOne({_id: id});
+                }
+            });
         }
     }
 });

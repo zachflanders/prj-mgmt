@@ -1,0 +1,23 @@
+<template name='projectUpdate'>
+  <h2>{{project}}</h2>
+  <div class='panel panel-default'>
+    <div class='panel-heading'>
+    <strong>Project Update</strong>
+  </div>
+    <table class="table">
+      <tbody>
+    <tr><td><strong>Date:</strong></td><td> {{date}}</td></tr>
+    <tr><td><strong>Direct Labor:</strong></td><td> {{formatCurrency directLabor}}</td></tr>
+    <tr><td><strong>Direct Expense:</strong></td><td> {{formatCurrency directExpense}}</td></tr>
+    <tr><td><strong>Direct Consultant:</strong></td><td> {{formatCurrency directConsultant}}</td></tr>
+    <tr><td><strong>Reimbursable Expense:</strong></td><td> {{formatCurrency reimbursableExpense}}</td></tr>
+    <tr><td><strong>Reimbursable Consultant:</strong></td><td> {{formatCurrency reimbursableConsultant}}</td></tr>
+  </tbody>
+    </table >
+    <div class="panel-body">
+      <a href="/project/{{projectId}}" class='btn btn-default pull-right'>Back</a>
+    </div>
+
+
+  </div>
+</template>

@@ -9,3 +9,9 @@ Template.navbar.events({
     Router.go('/');
   }
 });
+
+Template.navbar.helpers({
+  email: function(){
+    return Meteor.user().emails[0].address;
+  }
+})

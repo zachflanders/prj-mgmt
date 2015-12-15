@@ -4,6 +4,7 @@ Template.projectAdd.events({
     "submit #projectAdd": function (event) {
       event.preventDefault();
       var projectNumber = event.target.projectNumber.value;
+      var projectName = event.target.projectName.value;
       var totalFee = event.target.totalFee.value;
       var bnimFee = event.target.bnimFee.value;
       var consultantFee = event.target.consultantFee.value;

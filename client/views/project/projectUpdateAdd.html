@@ -29,7 +29,10 @@
           <label for="reimbursableConsultant">Reimbursable Consultant</label>
             <input type='number' step='any' class ='form-control' name='reimbursableConsultant' value="{{reimbursableConsultant}}">
         </div>
-        <button type="submit" class="btn btn-default pull-right">Add Update</button>
+        <div class='pull-right'>
+          <a href="/project/{{projectId}}" class="btn btn-default cancel">Cancel</a>
+          <button type="submit" class="btn btn-default">Add Update</button>
+        </div>
       </form>
     </div>
   </div>
