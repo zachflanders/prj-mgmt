@@ -19,6 +19,35 @@
       <p><strong>Consultant Fee: </strong>{{formatCurrency consultantFee}}</p>
     </div>
   </div>
+  <div class="panel panel-default">
+    <div class='panel-heading'>
+      <strong>Analysis at Cost</strong>
+    </div>
+  <div class="panel-body">
+
+      <div class="col-md-12">
+        <p><strong>Total Fee Remaining: </strong>{{formatCurrency totalFeeAtCost}}</p>
+        <p><strong>BNIM Fee Remaining: </strong>{{formatCurrency bnimFeeAtCost}}</p>
+        <p><strong>Consultant Fee Remaining: </strong>{{formatCurrency consultantFeeAtCost}}</p>
+      </div>
+      <div class="col-md-12 chart" id='chart' style='min-width:450px;'>
+        {{analysisAtCostChart '#chart'}}
+      </div>
+      <div class="col-md-12 consultantchart" id='chart' style='min-width:450px;'>
+      </div>
+
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class='panel-heading'>
+      <strong>Analysis at 30% Profit</strong>
+    </div>
+  <div class="panel-body">
+      <p><strong>Total Fee Remaining: </strong>{{formatCurrency totalFeeAtProfit}}</p>
+      <p><strong>BNIM Fee Remaining: </strong>{{formatCurrency bnimFeeAtProfit}}</p>
+      <p><strong>Consultant Fee Remaining: </strong>{{formatCurrency consultantFeeAtProfit}}</p>
+    </div>
+  </div>
 
 
   <div class="panel panel-default">

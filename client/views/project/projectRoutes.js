@@ -72,3 +72,21 @@ Router.route('/project/:projectId/update/:_id', {
         }
     }
 });
+
+Router.route('/project/:projectId/update/:_id/edit', {
+    waitOn: function() {
+        return Meteor.subscribe('projects');
+        return Meteor.subscribe('updates');
+    },
+    action: function() {
+        if (this.ready()) {
+            var params = this.params;
+            var id = params._id;
+            this.render('projectUpdateEdit', {
+                data: function () {
+                    return Updates.findOne({_id: id});
+                }
+            });
+        }
+    }
+});
